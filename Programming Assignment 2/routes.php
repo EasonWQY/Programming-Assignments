@@ -12,6 +12,11 @@
 */
 
 Route::get('/', 'PageController@index'); 
+<<<<<<< HEAD
+=======
+Route::get('/greet/{name}', 'PageController@greet');
+Route::get('/getWeather/{location}', 'WeatherController@getWeather');
+>>>>>>> origin/master
 
 /*
 |--------------------------------------------------------------------------
