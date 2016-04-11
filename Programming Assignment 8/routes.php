@@ -13,7 +13,7 @@ Route::get('/locations', 'LocationController@index')->name('locations');
 Route::get('/stories',  'StoryController@index')->name('stories');
 Route::get('/tags', 'StoryController@tags')->name('tags');
 Route::get('/', function () {
-	return view('welcome');
+    return view('welcome');
 });
 Route::get('/story/create', 'StoryController@create')->name('create');
 Route::post('/story/store', 'StoryController@store')->name('store');
@@ -28,7 +28,6 @@ Route::post('/story/store', 'StoryController@store')->name('store');
 |
 */
 Route::group(['middleware' => 'web'], function () {
-	Route::auth();
-	Route::get('/home', 'HomeController@index');
+    Route::auth();
+    Route::get('/home', 'HomeController@index');
 });
-
